@@ -5,7 +5,7 @@ import { uglify } from "rollup-plugin-uglify"
 export default {
   input: "./lib/index.js",
   output: {
-    file: "./lib.js",
+    file: "./test.min.js",
     format: "umd",
     name: "test"
   },

@@ -21,7 +21,7 @@ while (1) {
 or:
 
 ```html
-<script src="https://saber2pr.top/test/lib.js"></script>
+<script src="https://saber2pr.top/test/test.min.js"></script>
 ```
 
 > Author: saber2pr
