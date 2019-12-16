@@ -7,7 +7,7 @@ export default {
   output: {
     file: "./test.min.js",
     format: "umd",
-    name: "test"
+    name: "Test"
   },
   watch: {
     include: "lib/**"
