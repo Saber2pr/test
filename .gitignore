@@ -3,3 +3,7 @@ package-lock.json
 .vscode/
 build/
 lib/
+# umi
+.umi
+.umi-production
+.env.local
