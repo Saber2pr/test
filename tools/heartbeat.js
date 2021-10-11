@@ -1,4 +1,4 @@
-const heartbeat = {
+const HEARTBEAT = {
   alive: false, // 是否断开连接
   delta: 100, // 心跳频率
   connect(cb = () => {}) {
@@ -7,20 +7,20 @@ const heartbeat = {
       window.addEventListener('message', event => {
         const data = event.data || {}
         if (data.type === 'live') {
-          KeepAlive.alive = true
+          HEARTBEAT.alive = true
         }
       })
       // 检测是否收到
       setInterval(prev => {
-        cb(KeepAlive.alive)
-        KeepAlive.alive = false
+        cb(HEARTBEAT.alive)
+        HEARTBEAT.alive = false
         // 延时必须比client端晚一点
-      }, KeepAlive.delta * 1.5)
+      }, HEARTBEAT.delta * 1.5)
     } else {
       setInterval(() => {
         // 发送心跳包
         top.postMessage({ type: 'live' }, '*')
-      }, KeepAlive.delta)
+      }, HEARTBEAT.delta)
     }
   },
 }
