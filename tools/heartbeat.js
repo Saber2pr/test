@@ -1,7 +1,7 @@
 const heartbeat = {
   alive: false, // 是否断开连接
   delta: 100, // 心跳频率
-  connect(cb) {
+  connect(cb = () => {}) {
     if (top === self) {
       // 接收端
       window.addEventListener('message', event => {
