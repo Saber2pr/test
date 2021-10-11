@@ -24,4 +24,4 @@ var HEARTBEAT = {
     }
   },
 }
-HEARTBEAT.connect()
+HEARTBEAT.connect() // 建立连接
