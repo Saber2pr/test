@@ -24,3 +24,4 @@ const HEARTBEAT = {
     }
   },
 }
+HEARTBEAT.connect()
