@@ -1,4 +1,4 @@
-const HEARTBEAT = {
+var HEARTBEAT = {
   alive: false, // 是否断开连接
   delta: 100, // 心跳频率
   connect(cb = () => {}) {
